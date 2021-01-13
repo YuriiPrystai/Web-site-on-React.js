@@ -1,0 +1,24 @@
+.time_line{
+  display: block;
+  margin: auto;
+
+  text {
+      font-family: Advira;
+  }
+
+  &__dates{
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+  }
+
+  &__text{
+      font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .time_line{
+    display: none;
+  }
+}

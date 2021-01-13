@@ -1,0 +1,376 @@
+@keyframes arrowDown {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper{
+  width: 100%;
+  padding-top: 150px;
+
+  h1{
+    font-family: Advira;
+    font-size: 8rem;
+    color: #470d0d;
+    margin: 3rem 0;
+    padding: 0 0.5rem;
+    text-align: center;
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+
+    &__main_logo {
+      max-width: 400px;
+      margin-bottom: 3rem;
+    }
+  
+    &__info{
+      width: 80%;
+      margin: auto;
+      font-family: Advira;
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+  
+      &__blocks{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+
+        &__additional_block {
+          position: relative;
+          margin-bottom: 2rem;
+          transition: margin-bottom 0.2s ease-in;
+          transition-delay: 0.2s;
+          
+          &__block{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 3rem 0;
+            border-radius: 3rem;
+            box-sizing: border-box;
+            background-color: rgba( rgb(100, 34, 44), 0.8);
+    
+            img{
+              display: block;
+              position: absolute;
+              padding: 5px;
+              width: 10%;
+              max-width: 10%;
+              max-height: 90%;
+              left: 12%;
+            }
+    
+            p{
+              width: 80%;
+              padding: 10px;
+              margin: 0;
+              text-align: center;
+              color: honeydew;
+    
+              span:first-child {
+                text-shadow: 2px 2px 4px rgb(90, 27, 27);
+              }
+            }
+          }
+          &__btn_open_hidden {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('../../assets/arrow.svg');
+            bottom: -20px; 
+            left: calc(50% - 25px);
+            cursor: pointer;
+            animation: arrowDown 0.5s infinite;
+            animation-direction: alternate-reverse;          
+          }
+          &__hidden_text {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.2s ease-out;
+  
+            p {
+              margin: 2rem 0;
+              padding: 0 2rem;
+              font-size: 2.5rem;
+              text-align: justify;
+              text-indent: 5rem;
+              line-height: normal;
+              color: rgb(41, 37, 37);
+            }
+            p:first-child {
+              margin-top: 2rem;
+              margin-bottom: 0;
+            }
+          }
+        }
+        &__additional_block:first-of-type {
+          img{
+            left: 9%;
+            width: 16%;
+            max-width: 16%;
+          }
+        }
+        &__additional_block:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px){
+    background: linear-gradient(
+      rgba($color: #f8e4e4, $alpha: 0.2) 0%, 
+      rgba($color: #f3868f, $alpha: 0.3) 7%,
+      rgba($color: #d85b66, $alpha: 0.4) 15%,
+      rgba($color: #c94954, $alpha: 0.6) 25%,
+      rgba($color: #b6414b, $alpha: 0.7) 50%,
+      rgba($color: #a5303a, $alpha: 0.8) 100%
+    );
+    
+    h1{
+      font-size: 5.5rem;
+    }
+
+    &__content{
+
+      &__info{
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+    
+        &__blocks{
+          padding: 0;
+          
+          &__additional_block {
+            margin: 0;
+            border-top: 1px solid #691717;
+
+            &__block{
+              flex-direction: column;
+              height: auto;
+              border-radius: 0;
+              padding: 2rem 0 4rem 0;
+              background-color: transparent;
+
+              p {
+                padding: 2rem;
+                color:  #ffffff;
+                text-shadow: 1px 1px 2px rgb(90, 27, 27);
+                font-weight: 600;
+                font-size: 2.3rem;
+              }
+    
+              img{
+                position: relative;
+                left: 0;
+                top: 0;
+                padding: .5rem;
+              }
+            }
+            &__btn_open_hidden {
+              bottom: 0;
+            }
+            &__hidden_text {
+  
+              p {
+                padding: 0 4rem;
+                text-align: center;
+                text-indent: 0;
+                font-size: 2.2rem;
+                color: rgb(255, 255, 255);
+                text-shadow: 1px 1px 2px rgb(90, 27, 27);
+                font-weight: 600;
+              }
+            }
+          }
+          &__additional_block:first-of-type {
+            border: none;
+            img{
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1030px){
+    padding-top: 100px;
+  }
+  @media screen and (max-width: 950px){
+    &__content{
+
+      &__main_logo {
+        max-width: 300px;
+      }
+
+      &__info{
+        font-weight: 500;
+        letter-spacing: 2px;
+    
+        &__blocks{
+
+          &__additional_block {
+            &__block{
+            
+              img{
+                width: 14%;
+                max-width: 14%;
+                padding: 1rem;
+              }
+            }
+            &__hidden_text {
+  
+              p {
+                font-size: 1.8rem;
+              }
+            }
+          }
+          &__additional_block:first-of-type {
+            img{
+              width: 24%;
+              max-width: 24%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    padding-top: 60px;
+
+    h1{
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &__content{
+      &__main_logo {
+        max-width: 250px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  @media screen and (max-width: 650px){
+    padding-top: 50px;
+
+    h1{
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+    }
+
+    &__content{
+      &__main_logo {
+        max-width: 200px;
+        margin-bottom: 1.5rem;
+      }
+
+      &__info{
+        font-size: 1.5rem;
+    
+        &__blocks{
+
+          &__additional_block {
+            &__block{
+              box-sizing: border-box;
+    
+              img {
+                width: 19%;
+                max-width: 19%;
+                padding: 2px;
+              }
+
+              p{
+                padding: 1.5rem 1rem;
+                border-bottom: none;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 2rem;
+              }
+            }
+            &__btn_open_hidden {
+              width: 40px;
+              height: 40px;
+              left: calc(50% - 20px);
+            }
+            &__hidden_text {
+  
+              p {
+                font-size: 2rem;
+                letter-spacing: normal;
+                font-weight: 400;
+              }
+              p:first-child {
+                margin-bottom: 1rem;
+              }
+              p:last-child {
+                margin-top: 1rem;
+              }
+            }
+          }
+          &__additional_block:first-of-type {
+            img{
+              width: 30%;
+              max-width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    &__content {
+      &__info {
+        &__blocks{
+
+          &__additional_block {
+
+            &__block {
+              p {
+                font-size: 1.7rem;
+              }
+
+              img{
+                width: 22%;
+                max-width: 22%;
+                padding: 2px;
+              }
+            }
+    
+            &__hidden_text {
+
+              p {
+                padding: 0 2rem;
+                font-size: 1.7rem;
+              }
+            }
+          }
+          &__additional_block:first-of-type {
+            img{
+              width: 33%;
+              max-width: 33%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

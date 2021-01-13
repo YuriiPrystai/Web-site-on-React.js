@@ -1,0 +1,40 @@
+.input {
+  position: relative;
+  
+  &__radioInput {
+    background-color: #ededed;
+  }
+
+  &__label {
+    padding: .1rem;
+    font-size: 1.2rem;
+  }
+
+  &__radioField {
+    position: relative;
+    vertical-align: text-top;
+    float: left;
+  }
+
+  &__field {
+    background-color:  rgba(101, 18, 17, 0.2);
+    padding: 1rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: .2rem solid #e35768;
+    outline: none;
+    box-sizing: border-box;
+    margin: .3rem 0;
+    word-break: break-all;
+  }
+
+  &__feedback {
+    position: absolute;
+    right: 0;
+    color: red;
+    margin: .1rem;
+  }
+}

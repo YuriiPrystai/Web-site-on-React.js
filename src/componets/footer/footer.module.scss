@@ -1,0 +1,259 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 270px;
+  background-color: rgb(172, 87, 99);
+
+  &__container{
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__blocks{
+      width: 1096px;
+      height: 88%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p,
+      a{
+        color: #F3FF47;
+      }
+
+      &__block_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 37%;
+        height: 100%;
+        font-family: Advira;
+
+        p{
+          font-size: 2rem;
+          margin: 0;
+        }
+
+        p:first-child{
+          font-size: 2.4rem;
+          font-weight: 600;
+          color:#f3eb00;
+        }
+
+        &__menu{
+          text-align: center;
+          font-size: 2.3rem;
+          line-height: 3.2rem;
+          padding: 0;
+
+          li{
+            list-style-type: none;
+          }
+        }
+      }
+
+      &__block_logo{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 26%;
+        height: 90%;
+        border-left: 0.4px solid #651C1C;
+        border-right: 0.4px solid #651C1C;
+
+        img{
+          display: block;
+          width: 180px;
+          margin-bottom: 5px;
+        }
+
+        &__text{
+          text-align: center;
+          font-size: 2.4rem;
+
+          p{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 5px 0;
+
+            img{
+              width: 3.2rem;
+              height: 3.2rem;
+              margin: 0 3px 0 0;
+            }
+
+            a{
+              text-decoration: none;
+            }
+          }
+          p:last-child{
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &__copy{
+      display: flex;
+      align-items: center;
+      height: 12%;
+      
+      p{
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #460808;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1096px){
+  .wrapper{
+    width: 100%;
+    height: 590px;
+
+    &__container{
+      height: 100%;
+      width: 100%;
+      padding: 0;
+    
+      &__blocks{
+        display: flex;
+        width: 100%;
+        height: 90%;
+        box-sizing: border-box;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 0.4px solid #651C1C;
+
+        &__block_content{
+          width: 100%;
+          height: auto;
+
+          p{
+            font-size: 2rem;
+          }
+
+          p:first-child{
+            font-size: 2rem;
+            font-weight: 600;
+            color:#f3eb00;
+          }
+
+          &__menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            font-size: 2.1rem;
+            letter-spacing: 1.5px;
+            line-height: 3.2rem;
+          }
+        }
+
+        &__block_content:first-child{
+          margin-bottom: 4%;
+        }
+
+        &__block_logo{
+          width: 100%;
+          height: auto;
+          margin: 0 0 4% 0;
+          border: none;
+  
+          img{
+            width: 120px;
+          }
+
+          &__text{
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            line-height: 2.6rem;
+
+            p{
+
+              img{
+                width: 2.3rem;
+                height: 2.3rem;
+              }
+            }
+          }
+        }
+      }
+      &__copy{
+        height: 10%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .wrapper{
+    height: 330px;
+
+    &__container{
+    
+      &__blocks{
+
+        &__block_content{
+
+          p{
+            font-size: 1.6rem;
+            text-align: center;
+          }
+
+          p:first-child{
+            font-size: 1.8rem;
+            font-weight: 600;
+            color:#f3eb00;
+          }
+        }
+
+        &__block_content:first-child{
+          display: none;
+        }
+
+        &__block_logo{
+          width: 100%;
+          height: auto;
+          margin-bottom: 15px;
+          border: none;
+  
+          img{
+            width: 120px;
+            margin-bottom: 10px;
+          }
+
+          &__text{
+            font-size: 1.8rem;
+            letter-spacing: 1.3px;
+            line-height: 2.4rem;
+
+            p{
+
+              img{
+                width: 2rem;
+                height: 2rem;
+              }
+            }
+          }
+        }
+      }
+      &__copy{
+        height: 10%;
+      }
+    }
+  }
+}

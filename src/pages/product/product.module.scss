@@ -1,0 +1,343 @@
+@font-face { 
+  font-family: Advira;
+  src: url(../../fonts/Avdira.otf);
+}
+
+.product {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18rem 10% 0 10%; 
+  font-family: Advira;
+
+  &__header {
+    font-size: 9rem;
+    color: #470d0d;
+    text-align: center;
+    margin: 0;
+    padding: 0 0.5rem;
+  }
+
+  &__content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5rem 0 4rem 0;
+
+    &__header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+
+      &__image {
+        position: relative;
+        width: 50%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      &__components {
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 0 0 7rem;
+        
+        p {
+          float: inherit;
+          font-size: 2.8rem;
+          text-align: center;
+        }
+  
+        table {
+          width: 100%;
+          border-collapse: collapse;
+  
+          tr {
+            font-size: 2.5rem;
+            height: 3rem;
+            
+            td {
+              border-bottom: 1px solid grey;
+              padding: 0.6rem;
+            }
+            
+            td:nth-child(1) {
+              border-right: 1px solid grey;
+            }
+          }
+        }
+      }
+    }
+    
+    .description_styles {
+      width: 80%;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__advanced_info {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+
+      &__table_row {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: left;
+        padding-left: 0.8rem;
+        box-sizing: border-box;
+        border: 1px solid #dddddd;
+        
+        div:first-child {
+          font-weight: 600;
+        }
+
+        &:nth-child(odd) {
+          background-color: rgba(101, 18, 17, 0.2);
+        }
+        
+        &__values {
+          display: flex;
+          width: 70%;
+
+          p {
+            width: 50%;
+            padding-left: 0.5rem;
+            padding-right: 3rem;
+          }
+        }
+      }
+
+      &__table_row:first-child{
+        font-weight: 600;
+      }
+
+      p {
+        padding: 0 0.5rem;
+      }
+    }
+
+    &__button{
+      a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-weight: 500;
+        position: relative;
+        color: #444242;
+        padding: 10px;
+      }
+
+      &__link{
+        padding: 1em 3em;
+        border: 3px solid #842828;
+        transition: all 300ms ease;
+        box-shadow: 0px 4px 10px 2px rgba(black, 0.4);
+      }
+
+      &__link:before{
+        position: absolute;
+        content: '';
+        width: 0%; height: 100%;
+        background:  #842828;
+        top: 0;  left: auto; right: 0;
+        z-index: -1;
+        transition: all 300ms ease;
+      }
+
+      &__link:hover{
+        color: white; 
+        box-shadow:none;
+      }
+
+      &__link:hover:before{
+        position: absolute;
+        content: '';
+        width: 100%; height: 100%;
+        background:  #842828;
+        top: 0; left: 0; right: 0;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) { 
+  .product{
+    &__content {
+  
+      &__header{
+  
+        &__components{
+  
+          p {
+            font-size: 2.4rem;
+          }
+  
+          table {
+            tr {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      &__advanced_info {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) { 
+  .product {
+    padding-top: 120px;
+
+    &__content {
+      &__header {  
+        margin: 0;
+    
+        &__image{
+          width: 100%;
+        }
+        &__components{
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 0;
+    
+          p{
+            font-size: 3rem;
+          }
+    
+          td{
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      &__advanced_info {
+        font-size: 2rem;
+        flex-direction: column;
+
+        &__table_row {
+          text-align: center;
+          padding-left: 0;
+
+          &__values {
+            p:first-child {
+              border-right: 1px solid #969494;
+            }
+          }
+
+          div {
+            width: 100%;
+          }
+
+          div:nth-child(1) {
+            border-bottom: 1px solid #969494;
+          }
+        }
+
+        &__table_row:first-child {
+          color: rgb(255, 255, 255);
+          text-shadow: 1px 1px 3px rgb(75, 19, 19);
+          background-color: rgba(101, 18, 17, 0.5);
+          
+          div:first-of-type {
+            display: none;
+          }
+        }
+
+        &__table_row:last-child {
+          div:last-of-type {
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) { 
+  .product {
+    padding-top: 80px;
+    
+    &__content {
+      &__advanced_info {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) { 
+  .product {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  .product{
+    width: 100%;
+
+    &__header {
+      font-size: 4.5rem;
+    }
+
+    &__content{
+      width: 100%;
+      padding: 2rem 2rem 3rem 2rem;
+
+      &__header {
+        
+        &__components {
+          padding: 0;
+
+          p {
+            font-size: 2.5rem;
+          }
+
+          td{
+            font-size: 2rem;
+          }
+          
+        }
+      }
+      
+      &__advanced_info {
+        font-size: 1.4rem;
+      }
+
+      .description_styles {
+        width: 100%;
+
+        p {
+          font-size: 2.1rem;
+        }
+      }
+
+      &__button{
+        a {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}

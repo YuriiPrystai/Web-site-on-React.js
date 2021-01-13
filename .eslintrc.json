@@ -1,0 +1,26 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2019,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+      "global-require": "off",
+      "react/prop-types": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "react/no-unescaped-entities": "off"
+    }
+}

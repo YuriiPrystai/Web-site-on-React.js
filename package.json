@@ -1,0 +1,50 @@
+{
+  "name": "turkey-web-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "canvas": "^2.6.1",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.6",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-google-maps": "^9.4.5",
+    "react-image-file-resizer": "^0.3.9",
+    "react-loader-spinner": "^3.1.14",
+    "react-parallax": "^3.1.2",
+    "react-responsive-carousel": "^3.2.11",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "shortid": "^2.2.15",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint src/**/*.js src/**/*.jsx --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}
